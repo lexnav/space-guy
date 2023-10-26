@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/Platinum Sign.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Platinum Sign Over.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenas/Interfaz.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Interfaz" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="lblScore" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -50.5
+margin_top = -0.902496
+margin_right = 50.5
+margin_bottom = 105.098
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lblMsj" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.855
+margin_top = -182.0
+margin_right = 262.145
+margin_bottom = -50.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.129412, 0.266667, 0.588235, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "SPACE GUY 
+TUTO"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="BtnPlay" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -75.965
+margin_top = -159.976
+margin_right = 80.035
+margin_bottom = -109.976
+custom_fonts/font = SubResource( 3 )
+text = "A JUGAR!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerMsj" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+[connection signal="pressed" from="BtnPlay" to="." method="_on_BtnPlay_pressed"]
+[connection signal="timeout" from="TimerMsj" to="." method="_on_TimerMsj_timeout"]

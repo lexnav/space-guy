@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Underpants Gnomes.wav-77220cb8010c3eb45c8eafa20b35d2c2.sample"
+
+[deps]
+
+source_file="res://Sounds/Underpants Gnomes.wav"
+dest_files=[ "res://.import/Underpants Gnomes.wav-77220cb8010c3eb45c8eafa20b35d2c2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
